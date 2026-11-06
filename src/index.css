@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --color-primary-50: #f0f7f2;
+  --color-primary-100: #dcefe1;
+  --color-primary-200: #b9dfc6;
+  --color-primary-400: #4fa870;
+  --color-primary-600: #23804b;
+  --color-primary-700: #1b6a3d;
+  --color-primary-800: #155532;
+  --color-primary-900: #0f3f25;
+}
+
+@layer base {
+  body {
+    @apply bg-stone-100 text-stone-800 antialiased;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.3s ease-out;
+}
